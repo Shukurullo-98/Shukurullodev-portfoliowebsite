@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+{#    <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/150x200">#}
+    <div class="text-center lg:w-2/3 w-full">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Shukurullo Rahmatov</h1>
+      <p class="mb-8 leading-relaxed">I am a back end developer.</p>
+      <p class="mb-8 leading-relaxed">
+          <a class="text-4xl p-3 block-inline" href="https://github.com/shukurullodev"><i class="fa-brands fa-github"></i></a>
+          <a class="text-4xl p-3 block-inline" href="https://instagram.com/shukurullo3996"><i class="fa-brands fa-instagram"></i></a>
+          <a class="text-4xl p-3 block-inline" href="https://www.facebook.com/shukurulo.rahmatov"><i class="fa-brands fa-facebook"></i></a>
+          <a class="text-4xl p-3 block-inline" href="https://t.me/SH_RAHMATOV"><i class="fa-brands fa-telegram"></i></a>
+          <a class="text-4xl p-3 block-inline" href="http://www.linkedin.com/in/shukurullo-rahmatov"><i class="fa-brands fa-linkedin"></i></a>
+      </p>
+      <div class="flex justify-center">
+          <a href="{% url 'about' %}"><button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">About me</button>
+</a>
+       <a href="{% url 'blog' %}"> <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Blog's</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

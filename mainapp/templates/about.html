@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<a href="#" class="flex mt-1 ml-4 mr-4 mb-8 flex-col items-center bg-white rounded-lg border shadow-md md:flex-row  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full h-96 rounded-t-lg md:h md:w-32 md:rounded-none md:rounded-l-lg" src="{% static '16.jpeg'%}" style="height:320px; width:240px" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Shukurullo Rahmatov</h5>
+        {% for i in abouts %}
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Age: {{ i.save }} </p>
+        {% endfor %}
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Phone: +99890 377 39 96</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Email: Tbekamov@gmail.com</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+    </div>
+</a>
+
+<div class=""><h1 style="font-size:60px;text-align:center;">Skills</h1></div>
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+
+            <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400"></p>
+        </caption>
+{#        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">#}
+{#            <tr>#}
+{#                <th scope="col" class="py-3 px-6">#}
+{#                    Product name#}
+{#                </th>#}
+{#                <th scope="col" class="py-3 px-6">#}
+{#                    Color#}
+{#                </th>#}
+{#                <th scope="col" class="py-3 px-6">#}
+{#                    Category#}
+{#                </th>#}
+{#                <th scope="col" class="py-3 px-6">#}
+{#                    Price#}
+{#                </th>#}
+{#                <th scope="col" class="py-3 px-6">#}
+{#                    <span class="sr-only">Edit</span>#}
+{#                </th>#}
+{#            </tr>#}
+{#        </thead>#}
+        <tbody>
+            <tr class="bg-white p-5 border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="py-4 text-2xl px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+
+                </th>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    Python
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    Django
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    DRF
+                </td>
+
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+
+                </th>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    HTML
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    Css
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    SQL Oracle
+                </td>
+
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+
+                </th>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    Bootstrap
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+                    PostgreSql
+                </td>
+                <td class="py-4 px-6 text-gray-900 text-2xl">
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

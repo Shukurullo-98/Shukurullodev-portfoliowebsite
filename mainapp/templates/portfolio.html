@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto ">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">Portfolio</h1>
+    </div>
+
+    <div class="flex flex-wrap pl-10 -m-4 grid-rows-4">
+{% for i in form %}
+      <div class="p-4  lg:w-1/2">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900"><a href="{{ i.url }}" target="blank">{{ i.title }}</a></h2>
+
+          </div>
+        <div class="h-full grid-rows-4 ml-8 flex sm:flex flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <a href="{{ i.url }}"><img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="{{ i.image.url }}"></a>
+            {% empty %}
+            <p>Empty</p>
+
+        </div>
+      </div>
+{% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endblock content %}
